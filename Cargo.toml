@@ -1,0 +1,21 @@
+[package]
+name = "kgdb-console-splitting-proxy"
+version = "0.0.1"
+edition = "2024"
+description = "UDP/TCP/Serial splitter for dmesg and kgdb"
+readme = "README.md"
+repository = "https://github.com/Alexeyan/kgdb-console-splitting-proxy"
+license = "GPL-3.0"
+keywords = ["kgdb", "serial", "dmesg", "console", "android", "pixel"]
+
+[dependencies]
+nix = { version = ">=0.31", features = [
+    "fs",
+    "net",
+    "poll",
+    "process",
+    "signal",
+    "socket",
+    "term",
+] }
+libc = "0.2"
